@@ -1,0 +1,30 @@
+@media (max-width: 767px) {
+    nav .container .links li a {
+        font-size: 10px;
+    }
+    nav .container .links {
+        padding: 0;
+        /* padding-top: 5px; */
+        /* padding-right: 5px; */
+    }
+    nav .container .brand h1 {
+        padding-left: 10px;
+        /* margin: 0; */
+        font-size: 10px;
+        margin: 0;
+    }
+    .about-me .container .cv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .about-me .container .cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .projects .container .cards {
+        display: flex;
+        flex-direction: column;
+    }
+}

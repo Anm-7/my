@@ -1,0 +1,482 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --background-color: #000000;
+    --background-color2: #252222;
+    --first-color: darkred;
+    --second-color: aqua;
+}
+
+
+/* Start UP Button */
+
+.up {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    background: var(--second-color);
+    color: #000000;
+    /* z-index: 3; */
+    display: none;
+}
+
+
+/* End UP Button */
+
+
+/* Start Navbar */
+
+nav {
+    background-color: #000000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+nav .container .brand h1 {
+    color: var(--second-color);
+    text-transform: uppercase;
+    padding: 20px 0 0 20px;
+    font-size: 18px;
+    /* text-shadow: 10px 10px 10px var(--second-color); */
+}
+
+nav .container .links {
+    list-style-type: none;
+    padding: 20px;
+    /* position: relative; */
+}
+
+nav .container .links li {
+    display: inline;
+    padding: 7px;
+    text-decoration: none;
+    transition: 0.8s;
+    position: relative;
+}
+
+nav .container .links li:hover,
+.active {
+    background: var(--first-color);
+    border-radius: 10px;
+}
+
+nav .container .links li a {
+    text-decoration: none;
+    color: var(--second-color);
+    /* font-size: 15px; */
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+nav .container .links li a:hover {
+    opacity: 0;
+}
+
+nav .container .links li .icon {
+    position: absolute;
+    left: 40%;
+    top: 100%;
+    color: var(--second-color);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+nav .container .links li a:hover~.icon {
+    left: 40%;
+    top: 20%;
+    opacity: 1;
+}
+
+
+/* End Navbar */
+
+
+/* Start Land Section */
+
+.land {
+    background: url(/imgs/pic1.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 50px 0;
+    height: 100vh;
+    position: relative;
+}
+
+
+/* End Land Section */
+
+
+/* Start Services Section */
+
+.services {
+    background: #252222;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.services h1 {
+    color: var(--first-color);
+    margin: 10px;
+    margin-bottom: 7px;
+    position: relative;
+}
+
+.services h1::before {
+    content: "";
+    position: absolute;
+    background: #f00;
+    width: 196px;
+    height: 2px;
+    bottom: -7px;
+}
+
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-items: flex-start;
+}
+
+.services .container .service {
+    background-color: var(--background-color);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.services .container .service svg {
+    color: var(--second-color);
+    transition: 0.5s;
+}
+
+.services .container .service:hover svg {
+    transform: translate(0, -7px);
+}
+
+.services .container .service svg+p {
+    color: var(--first-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.services .container .service p+p {
+    color: #fff;
+}
+
+
+/* End Services Section */
+
+
+/* Start Projects */
+
+.projects {
+    background: var(--background-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.projects h1 {
+    color: var(--first-color);
+    margin: 10px;
+    margin-bottom: 7px;
+    position: relative;
+}
+
+.projects h1::before {
+    content: "";
+    position: absolute;
+    background: #f00;
+    width: 176px;
+    height: 2px;
+    bottom: -7px;
+}
+
+.projects .container .cards {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; */
+    /* Another Way */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* align-items: flex-start; */
+}
+
+.projects .container .cards .card {
+    background-color: var(--background-color2);
+    margin: 30px;
+    /* padding: 20px; */
+    transition: 0.5s;
+    text-align: center;
+    align-items: flex-start;
+}
+
+
+/* .projects .container .cards .card:nth-of-type(2) {
+    transform: translate(0, -20px);
+} */
+
+.projects .container .cards .card:hover {
+    transform: translate(0, -20px);
+}
+
+.projects .container .cards .card .head {
+    padding: 10px;
+}
+
+.projects .container .cards .card .head svg {
+    transition: 0.5s;
+}
+
+.projects .container .cards .card:hover .head svg {
+    transform: rotate(360deg);
+}
+
+.projects .container .cards .card .head svg,
+.projects .container .cards .card .head h3 {
+    color: var(--second-color);
+}
+
+.projects .container .cards .card .body {
+    padding: 10px;
+}
+
+.projects .container .cards .card .body p {
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.projects .main .any {
+    background: #ffffff;
+}
+
+
+/* End Projects */
+
+
+/* Start About Me */
+
+.about-me {
+    padding: 40px 0;
+    background-color: var(--background-color2);
+    text-align: center;
+    /* flex-direction: column; */
+}
+
+.about-me h1 {
+    color: var(--first-color);
+    margin: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.about-me h1::before {
+    content: "";
+    position: absolute;
+    background: #f00;
+    width: 145px;
+    height: 2px;
+    bottom: -2px;
+}
+
+.about-me h2 {
+    color: var(--first-color);
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    font-size: 2em;
+}
+
+.about-me h2::before {
+    content: "";
+    position: absolute;
+    background: #f00;
+    width: 182px;
+    height: 2px;
+    bottom: -7px;
+}
+
+.about-me .cv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: var(--background-color);
+}
+
+.about-me .cv img {
+    width: 40%;
+    /* height: 10%; */
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+
+.about-me .cv p {
+    color: var(--second-color);
+    padding: 10px;
+    /* letter-spacing: 0.5px; */
+    line-height: 1.4em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.about-me .cv p span {
+    color: #ffff00;
+    font-weight: bolder;
+    font-style: italic;
+    /* position: relative; */
+}
+
+.about-me .cv .icons svg {
+    color: var(--second-color);
+    padding: 7px;
+}
+
+
+/* End About Me */
+
+
+/* Start Contact Me */
+
+.contact {
+    background: var(--background-color);
+    padding: 40px 0;
+    text-align: center;
+    transition: red 1s;
+}
+
+.contact h1 {
+    color: var(--first-color);
+    /* margin: 10px; */
+    text-align: center;
+    position: relative;
+}
+
+.contact h1::before {
+    content: "";
+    position: absolute;
+    background: #f00;
+    width: 175px;
+    height: 2px;
+    bottom: -7px;
+}
+
+.contact .container {
+    margin: auto;
+    max-width: 900px;
+    background: #1c1212e6;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact .container .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .container .icons svg {
+    color: var(--second-color);
+}
+
+.contact .container .icons p {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.contact .container .info form h3 {
+    color: var(--second-color);
+}
+
+.contact .container .info form p {
+    color: #ffffff;
+}
+
+.contact .container .info form .container-input {
+    padding: 10px;
+}
+
+.contact .container .info form .container-input label {
+    color: var(--second-color);
+}
+
+.contact .container form .container-input input {
+    border: none;
+    border-bottom: 2px solid aqua;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact ::placeholder {
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contact .container form .container-input .msg {
+    color: var(--second-color);
+    background: #272626;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.contact .container .info form .btn-submit {
+    background-color: var(--first-color);
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: var(--second-color);
+    border-radius: 10px;
+}
+
+
+/* End Contact Me */
+
+
+/* Start Footer */
+
+footer {
+    text-align: center;
+    background: var(--background-color2);
+    padding: 10px;
+}
+
+footer p {
+    font-size: 20px;
+    color: var(--second-color);
+}
+
+footer p span {
+    color: var(--first-color);
+    font-weight: bold;
+}
+
+footer .icons svg {
+    color: var(--second-color);
+    padding: 5px;
+}
+
+
+/* End Footer */
